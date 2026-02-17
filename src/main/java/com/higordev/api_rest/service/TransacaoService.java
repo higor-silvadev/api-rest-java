@@ -12,7 +12,7 @@ public class TransacaoService {
 
     private final List<Transacao> transacoes = new ArrayList<>();
 
-    public void salvar(TransacaoRequest request){
+    public void salvar(TransacaoRequest request) {
 
         transacoes.add(new Transacao(request.valor(), request.dataHora()));
     }
