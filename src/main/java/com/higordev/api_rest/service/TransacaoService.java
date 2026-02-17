@@ -23,4 +23,8 @@ public class TransacaoService {
         validacoes.forEach(v -> v.validar(request));
         transacoes.add(new Transacao(request.valor(), request.dataHora()));
     }
+
+    public void deletar() {
+        transacoes.clear();
+    }
 }
