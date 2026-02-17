@@ -3,12 +3,14 @@ package com.higordev.api_rest.service;
 import com.higordev.api_rest.domain.Transacao;
 import com.higordev.api_rest.dto.TransacaoRequest;
 import com.higordev.api_rest.service.validacoes.Validacao;
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Getter
 public class TransacaoService {
 
     private final List<Transacao> transacoes = new ArrayList<>();
@@ -26,5 +28,9 @@ public class TransacaoService {
 
     public void deletar() {
         transacoes.clear();
+    }
+
+    public List<Transacao> getTransacoes() {
+        return transacoes;
     }
 }
